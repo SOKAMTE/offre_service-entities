@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import lombok.Data;
 import java.util.Set;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
         
 /**
  *
@@ -22,6 +23,7 @@ import javax.persistence.ManyToMany;
  */
 
 @Entity
+@Table(name = "Discussion")
 @Data
 public class Discussion implements Serializable{
     @Id

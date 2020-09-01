@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import lombok.Data;
 import java.util.Set;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
         
 /**
  *
@@ -22,13 +23,14 @@ import javax.persistence.ManyToMany;
  */
 
 @Entity
+@Table(name = "Admin")
 @Data
 public class Admin implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idadmin;
     
-    @Column(nullable = false, length = 45)
+    @Column(nullable = false, length = 45, unique = true)
     private String username;
     
     @Column(nullable = false, length = 45)

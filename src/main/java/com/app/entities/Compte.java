@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import lombok.Data;
 
@@ -22,13 +23,14 @@ import lombok.Data;
  */
 
 @Entity
+@Table(name = "Compte")
 @Data
 public class Compte implements Serializable{
    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idcompte; 
    
-   @Column(nullable = false, length = 45)
+   @Column(nullable = false, length = 45, unique = true)
     private String username;
     
     @Column(nullable = false, length = 45)

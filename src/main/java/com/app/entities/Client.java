@@ -18,6 +18,7 @@ import javax.persistence.CascadeType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 /**
  *
@@ -25,6 +26,7 @@ import javax.persistence.ManyToMany;
  */
 
 @Entity
+@Table(name = "Client")
 @Data
 public class Client implements Serializable{
     
@@ -32,7 +34,7 @@ public class Client implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idclient;
     
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 30, unique = true)
     private String nom;
     
     @Column(nullable = false, length = 13)
