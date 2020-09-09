@@ -44,4 +44,13 @@ public class Admin implements Serializable{
     
     @ManyToMany(mappedBy = "admins")
     private Set<Client> client = new HashSet<>();
+    
+    public Admin(Long idadmin, String mail, String password, int telephone, String username) {
+        this.idadmin = idadmin;
+        this.mail = mail;
+        this.password = password;
+        this.telephone = telephone;
+        this.username = username;
+    }
+    
 }
