@@ -32,4 +32,12 @@ public class Commentaire implements Serializable{
     
     @ManyToOne(optional = false)
     private Client client;
+
+	public Long getIdcommentaire() {
+		return idcommentaire;
+	}
+
+	public void setIdcommentaire(Long idcommentaire) {
+		this.idcommentaire = idcommentaire;
+	}
 }

@@ -24,4 +24,12 @@ public class ArticleType implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idarticletype;
+
+	public Long getIdarticletype() {
+		return idarticletype;
+	}
+
+	public void setIdarticletype(Long idarticletype) {
+		this.idarticletype = idarticletype;
+	}
 }

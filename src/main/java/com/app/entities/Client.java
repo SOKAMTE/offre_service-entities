@@ -65,4 +65,12 @@ public class Client implements Serializable{
         inverseJoinColumns = @JoinColumn(name = "iddiscussion")
     )
     private Set<Discussion> discussions = new HashSet<>();
+
+	public Long getIdclient() {
+		return idclient;
+	}
+
+	public void setIdclient(Long idclient) {
+		this.idclient = idclient;
+	}
 }

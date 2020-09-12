@@ -35,4 +35,12 @@ public class Discussion implements Serializable{
     
     @ManyToMany(mappedBy = "discussions")
     private Set<Client> client = new HashSet<>();
+
+	public Long getIddiscussion() {
+		return iddiscussion;
+	}
+
+	public void setIddiscussion(Long iddiscussion) {
+		this.iddiscussion = iddiscussion;
+	}
 }

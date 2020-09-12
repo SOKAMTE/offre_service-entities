@@ -44,4 +44,12 @@ public class Compte implements Serializable{
     
     @ManyToOne(optional = true)
     private Client client;
+
+	public Long getIdcompte() {
+		return idcompte;
+	}
+
+	public void setIdcompte(Long idcompte) {
+		this.idcompte = idcompte;
+	}
 }

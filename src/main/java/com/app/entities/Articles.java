@@ -44,4 +44,12 @@ public class Articles implements Serializable{
     
     @ManyToOne(optional = false)
     private Client client;
+
+	public Long getIdarticle() {
+		return idarticle;
+	}
+
+	public void setIdarticle(Long idarticle) {
+		this.idarticle = idarticle;
+	}
 }
